@@ -1,2 +1,24 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="container">
+<h3>Rentre tes informations ici :</h3>
+
+        <%= form_for @user, url: {action: "create"} do |g| %>
+        <h4 class="text-danger" id="error"><%= flash[:error] %></h4>
+        <div class="form-group">
+            <label>Ton pseudo ici :</label><br>
+            <%= g.text_field :name %><br>
+        </div>
+        <div class="form-group">
+            <label>Ton mot de passe ici</label><br>
+            <%= g.text_field :password %><br>
+        </div>
+        <div class="form-group">
+            <label>Retape ton mot de passe :</label><br>
+            <%= g.text_field :password_confirmation %><br>
+        </div>
+        <div class="form-group">
+            <button type=submit class="btn btn-primary">Créer mon compte</button>
+        </div>
+
+        <% end %>
+
+</div>

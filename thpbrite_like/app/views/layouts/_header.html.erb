@@ -1,3 +1,6 @@
+<div class="maxime">
+
+
 <nav class="navbar navbar-inverse navbar-fixed-left">
     <div class="container">
       <div class="navbar-header">
@@ -12,6 +15,7 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
 <!-- if here -->
+          <li><%= link_to "Sign in", new_user_path, class: "btn-lg btn-success" %></li>
           <li><a href="#">Log in</a></li>
 <!-- else here -->
           <li class="dropdown">
@@ -33,3 +37,4 @@
       </div>
     </div>
   </nav>
+</div>
