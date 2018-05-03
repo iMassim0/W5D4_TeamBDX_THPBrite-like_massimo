@@ -1,25 +1,14 @@
-<div class="restant">
-
-  <% flash.each do |message_type, message| %>
-    <div class="alert alert-succes"<%= message_type %><%= message %></div>
-  <% end %>
-
-    <h1>Hello World!</h1>
-
+<div class="content">
+  <div class="box">
     <% if logged_in? %>
-      <h4>Que souhaitez-vous faire :</h4>
-      <ul>
-        <li><a href="#">Créer un event</a></li>
-        <li><a href="#">Voir tous les events</a></li>
-        <li><a href="#">Voir les events auxquels je participe</a></li>
-        <li><a href="#">Gérer les utiliteurs</a></li>
-      </ul>
+      <h1>Hello <%= @current_user.name %>!</h1>
+      <br>
+      <h3>Welcome to this Eventbrite-like site, made by <strong>@massimo</strong>.
+      <br> Thx so much to <strong>@bab</strong> for helping !
+      <br> <strong>#TeamBDX</strong> </h3>
     <% else %>
-      <h4>veuillez vous connecter svp</h4>
+      <br><br><br><br><br><br>
+      <h4 class="btn btn-danger">Connexion requise pour aller sur ce site.</h4>
     <% end %>
-
-
-
-
-
+    </div>
 </div>
