@@ -1,11 +1,25 @@
 <div class="restant">
 
   <% flash.each do |message_type, message| %>
-    <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <div class="alert alert-succes"<%= message_type %><%= message %></div>
   <% end %>
 
     <h1>Hello World!</h1>
-    <p>veuillez vous connecter svp</p>
+
+    <% if logged_in? %>
+      <h4>Que souhaitez-vous faire :</h4>
+      <ul>
+        <li><a href="#">Créer un event</a></li>
+        <li><a href="#">Voir tous les events</a></li>
+        <li><a href="#">Voir les events auxquels je participe</a></li>
+        <li><a href="#">Gérer les utiliteurs</a></li>
+      </ul>
+    <% else %>
+      <h4>veuillez vous connecter svp</h4>
+    <% end %>
+
+
+
 
 
 </div>

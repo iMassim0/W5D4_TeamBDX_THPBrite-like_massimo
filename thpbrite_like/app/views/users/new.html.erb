@@ -5,7 +5,10 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <%= form_for(@user, url: {action: "create"}) do |f| %>
-              <h4 class="text-danger" id="error"><%= flash[:error] %></h4>
+
+            <h4 class="text-danger" id="error"><%= flash[:succes] %></h4>
+            <h4 class="text-danger" id="error"><%= flash[:error] %></h4>
+
               <%= f.label :name %>
               <%= f.text_field :name, class: 'form-control' %>
 <br>

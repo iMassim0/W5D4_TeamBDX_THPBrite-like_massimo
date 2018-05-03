@@ -11,19 +11,22 @@
           <span class="icon-bar"></span>
         </button>
         <% if !logged_in? %>
-        <a class="navbar-brand" href="<%= root_path %>">THP-brite Like</a>
+        <h5><a class="navbar-brand" href="<%= root_path %>">THP-brite Like</a></h5>
         <% else %>
-        <a class="navbar-brand" href="<%= root_path %>">Hello <%= current_user.name %></a>
+        <h3><a class="navbar-brand" href="<%= root_path %>">Hello <%= current_user.name %></a></h3>
         <% end %>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <% if !logged_in? %>
-            <li><%= link_to "Sign up", new_user_path, class: "btn-lg btn-success" %></li>
-            <li><a href="<%= login_path %>">Log in</a></li>
+            <li><%= link_to "Sign up", new_user_path, class: "btn btn-info" %></li>
+            <br>
+            <li><a href="<%= login_path %>" class="btn btn-info">Log in</a></li>
           <% else %>
-            <li><a href="<%= admin_path %>">Gestion des utilisateurs</a></li>
-            <li><%= link_to "Log out", logout_path, method: :delete %></li>
+            <li> <a href="#" class="btn btn-secondary" >Créer un event</a></li>
+            <li> <a href="#" class="btn btn-secondary" >Voir les events</a></li>
+            <li><a href="<%= admin_path %>" class="btn btn-secondary" >Gestion des utilisateurs</a></li>
+            <li><%= link_to "Log out", logout_path, method: :delete, class: "btn btn-danger" %></li>
           <% end %>
           <!-- <li><a href="<%= admin_path %>">Admin pas caché</a></li> -->
 

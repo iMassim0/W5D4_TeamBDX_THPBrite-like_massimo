@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   def create
     @user = User.create(params_user)
     if @user.errors.full_messages.empty?
-      flash[:succes] = 'Profil enregistré !'
-      redirect_to root_path
+      flash[:succes] = 'Profil enregistré, veuillez vous connecter svp.'
+      redirect_to login_url
     else
       flash[:error] = 'Rentre bien un pseudo et un mot de passe convenable !'
       redirect_to signup_url
