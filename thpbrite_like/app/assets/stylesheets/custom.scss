@@ -7,13 +7,24 @@ body {
 
 }
 
+.logo {
+  height: 200px;
+  width: auto;
+  align-items: center
+}
+
+.bdx {
+  display: flex;
+  justify-content: center
+}
+
 .content {
 
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
-  background-color: rgb(231,231,231);
+  // background-color: rgb(231,231,231);
   height: 100vh;
 }
 
@@ -36,7 +47,7 @@ body {
 }
 
 .maxime {
-  background-color: rgb(231,231,231);
+  // background-color: rgb(231,231,231);
   width: 200px;
 
 }

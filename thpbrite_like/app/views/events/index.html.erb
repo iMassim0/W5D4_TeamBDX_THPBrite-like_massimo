@@ -14,7 +14,16 @@
     </thead>
 
     <tbody>
-      <% @events.each_with_index do |event, i| %>
+      <tr>
+        <td><strong>Events will coming ...</strong></td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <% @future_events.each do |event| %>
         <tr>
           <th scope="row"><a href="<%= event_path(event.id) %>">Go</a></th>
           <td><%= event.date %></td>
@@ -26,6 +35,29 @@
                                     method: :delete,
                data: { confirm: 'Sur ?' } %></td>
         </tr>
+        <% end %>
+        <tr>
+        <td><strong>Events already passed ...</strong></td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+        <% @past_events.each do |event| %>
+        <tr>
+          <th scope="row"><a href="<%= event_path(event.id) %>">Go</a></th>
+          <td><%= event.date %></td>
+          <td><%= event.description %></td>
+          <td><%= event.date %></td>
+          <td><%= event.creator.name %></td>
+          <td><%= link_to 'Add buddies ...', class: 'btn btn-outline-secondary'%></td></td>
+          <td><%= link_to 'Delete', event, class: 'btn btn-outline-danger',
+                                    method: :delete,
+               data: { confirm: 'Sur ?' } %></td>
+        </tr>
+
         <% end %>
     </tbody>
   </table>

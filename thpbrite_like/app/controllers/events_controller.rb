@@ -35,7 +35,9 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
+    lol_date(@events)
   end
+
 
   private
 
