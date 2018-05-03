@@ -1,0 +1,26 @@
+<div class="restant">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Pseudo</th>
+        <th scope="col">Valid</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users.each_with_index do |user, i| %>
+        <tr>
+          <th scope="row"><%= i+1 %></th>
+          <td><%= user.name %></td>
+          <td><%= user.present? %></td>
+          <td><%= link_to 'Delete', user, class: 'btn btn-outline-danger',
+                                    method: :delete,
+               data: { confirm: 'Sur ?' } %></td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+
+</div>
