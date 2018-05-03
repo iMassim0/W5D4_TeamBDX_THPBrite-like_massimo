@@ -1,8 +1,11 @@
 <div class="restant">
 
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
 
     <h1>Hello World!</h1>
-    <p>home here</p>
+    <p>veuillez vous connecter svp</p>
 
 
 </div>
